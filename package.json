@@ -1,13 +1,22 @@
 {
-  "name": "metalsmith-drafts",
-  "description": "A metalsmith plugin to hide drafts.",
-  "repository": "git://github.com/segmentio/metalsmith-drafts.git",
-  "version": "0.0.1",
+  "name": "metalsmith-skip",
+  "description": "A metalsmith plugin to skip files.",
+  "repository": "git://github.com/dropofwill/metalsmith-skip.git",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "lib/index.js",
+  "scripts": {
+    "test": "gulp"
+  },
   "devDependencies": {
-    "mocha": "1.x",
+    "assert-dir-equal": "0.0.1",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-mocha": "^2.1.3",
     "metalsmith": "0.0.0",
-    "assert-dir-equal": "0.0.1"
+    "mocha": "1.x"
+  },
+  "dependencies": {
+    "lodash": "^3.10.0"
   }
 }

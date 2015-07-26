@@ -1,20 +1,21 @@
+# metalsmith-skip
 
-# metalsmith-drafts
-
-  A metalsmith plugin to hide drafts.
+  A metalsmith plugin to skip files. Based on metalsmith-drafts, but allows arbitrary keys (not just `draft`).
 
 ## Installation
 
-    $ npm install metalsmith-drafts
+    $ npm install metalsmith-skip
 
 ## CLI Usage
 
-  Install via npm and then add the `metalsmith-drafts` key to your `metalsmith.json` plugins, like so:
+  Install via npm and then add the `metalsmith-skip` key to your `metalsmith.json` plugins, like so:
 
 ```json
 {
   "plugins": {
-    "metalsmith-drafts": true
+    "metalsmith-skip": {
+      "keys": ["skip", "draft"]
+    }
   }
 }
 ```
@@ -26,12 +27,12 @@
   Pass the plugin to `Metalsmith#use`, like so:
 
 ```js
-var drafts = require('metalsmith-drafts');
+var skip = require('metalsmith-skip');
 
-metalsmith.use(drafts());
+metalsmith.use(skip({keys: ["skip", "draft"]));
 ```
 
-  Then in your files YAML front-matter add `draft: true`.
+  Then in your files YAML front-matter add `skip: true`.
 
 ## License
 
